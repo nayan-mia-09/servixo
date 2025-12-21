@@ -8,10 +8,13 @@ import ContactPage from './pages/ContactPage'
 import LoginPage from './pages/LoginPage'
 import MyProfile from './pages/MyProfile'
 import MyServices from './pages/MyServices'
+import NavBar from './components/NavBar'
 
 const App = () => {
   return (
-    <Routes>
+    <div className='container mx-auto'>
+      <NavBar/>
+       <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/services' element={<ServicesPage/>}/>
       <Route path='/staffs' element={<StaffsPage/>}/>
@@ -22,6 +25,8 @@ const App = () => {
       <Route path='/my-services' element={<MyServices/>}/>
       <Route path='/book-services' element={<ServicesPage/>}/>
     </Routes>
+    </div>
+   
     
   )
 }
